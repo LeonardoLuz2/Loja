@@ -1,8 +1,5 @@
 ﻿using FluentValidation;
 using Loja.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Loja.Domain.Validations
 {

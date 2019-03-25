@@ -33,7 +33,7 @@ namespace Loja.Tests.UnitTests
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsAssignableFrom<IEnumerable<ProdutoViewModel>>(
                 viewResult.ViewData.Model);
-            Assert.Equal(2, ((List<ProdutoViewModel>)model).Count);
+            Assert.Equal(2, (model as List<ProdutoViewModel>).Count);
         }
 
         [Fact]
