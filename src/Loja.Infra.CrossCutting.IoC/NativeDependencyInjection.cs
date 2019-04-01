@@ -18,8 +18,6 @@ namespace Loja.Infra.CrossCutting.IoC
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<IProdutoAppService, ProdutoAppService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            services.AddTransient<IValidator<Produto>, ProdutoValidation>();
         }
     }
 }

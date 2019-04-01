@@ -1,25 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28721.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{D33CF3E3-ABF9-4B7C-B9DE-17BE8AF348C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{6B4E43BC-8EC3-4E47-AFEA-845F437DA2D9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{6B4E43BC-8EC3-4E47-AFEA-845F437DA2D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{E84C3E4A-16F0-41B6-86D1-E7898C780392}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{E84C3E4A-16F0-41B6-86D1-E7898C780392}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{7667D567-2AE1-4EE4-8E21-DA25E3E018F9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{7667D567-2AE1-4EE4-8E21-DA25E3E018F9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{31DD2F90-453D-46B5-969B-6B89647F2A69}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{31DD2F90-453D-46B5-969B-6B89647F2A69}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Site", "src\Loja.Site\Loja.Site.csproj", "{2634FAED-9ABC-4363-8A91-2719DDE57BA9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Domain", "src\Loja.Domain\Loja.Domain.csproj", "{FB60D85A-2337-42C6-B874-4FB1E1C72E41}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Infra.Data", "4.1 Infra.Data", "{DA6A7777-54C3-4B55-8CCD-4D51928E07B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 Infra.Data", "5.1 Infra.Data", "{DA6A7777-54C3-4B55-8CCD-4D51928E07B9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 Infra.CrossCutting", "4.2 Infra.CrossCutting", "{E0A39041-211A-4B7C-BE94-D9753CDBA086}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 Infra.CrossCutting", "5.2 Infra.CrossCutting", "{E0A39041-211A-4B7C-BE94-D9753CDBA086}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Infra.Data", "src\Loja.Infra.Data\Loja.Infra.Data.csproj", "{26AA576F-D2FF-4DDB-B70C-4FCFD58835FF}"
 EndProject
@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Infra.CrossCutting.IoC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Application", "src\Loja.Application\Loja.Application.csproj", "{9A705528-9A8B-490A-90DB-1D061EAE3791}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Tests", "tests\Loja.Tests\Loja.Tests.csproj", "{D9EE13AD-FC70-4456-B816-57AA00BC7EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Tests", "tests\Loja.Tests\Loja.Tests.csproj", "{D9EE13AD-FC70-4456-B816-57AA00BC7EA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{3D06749C-FDD3-447A-9645-3C7402E75A5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.WebAPI", "src\Loja.WebAPI\Loja.WebAPI.csproj", "{355A187C-8472-4D95-BB24-FF211D715345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{D9EE13AD-FC70-4456-B816-57AA00BC7EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9EE13AD-FC70-4456-B816-57AA00BC7EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9EE13AD-FC70-4456-B816-57AA00BC7EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{355A187C-8472-4D95-BB24-FF211D715345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355A187C-8472-4D95-BB24-FF211D715345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355A187C-8472-4D95-BB24-FF211D715345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355A187C-8472-4D95-BB24-FF211D715345}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,7 @@ Global
 		{B4DFF665-E5EE-4C2C-919F-56CAA0B84578} = {E0A39041-211A-4B7C-BE94-D9753CDBA086}
 		{9A705528-9A8B-490A-90DB-1D061EAE3791} = {6B4E43BC-8EC3-4E47-AFEA-845F437DA2D9}
 		{D9EE13AD-FC70-4456-B816-57AA00BC7EA1} = {31DD2F90-453D-46B5-969B-6B89647F2A69}
+		{355A187C-8472-4D95-BB24-FF211D715345} = {3D06749C-FDD3-447A-9645-3C7402E75A5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B72915C8-DD0D-4FF6-87AF-44999D69EE48}

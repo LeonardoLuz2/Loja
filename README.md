@@ -1,9 +1,10 @@
-### Loja
-CRUD de produtos em ASP.NET Core MVC.
+### Projeto
+CRUD de produtos utilizando tecnologias .NET
 
 ### Tecnologias implementadas:
 * .NET Core 2.2
 * ASP.NET Core MVC
+* ASP.NET Core WebAPI 
 * Injeção de dependência nativa do .NET Core
 * FluentValidation
 * Entity Framework Core (InMemory)
