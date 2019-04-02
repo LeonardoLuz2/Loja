@@ -35,6 +35,8 @@ namespace Loja.WebAPI
                 options.UseInMemoryDatabase("InMemoryDatabase");
             });
 
+            services.AddCors();
+
             services.AddDependencyInjection();
         }
 
@@ -48,6 +50,13 @@ namespace Loja.WebAPI
             {
                  app.UseHsts();
             }
+
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();
