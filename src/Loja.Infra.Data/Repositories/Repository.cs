@@ -1,6 +1,6 @@
-﻿using Loja.Domain.Entities;
+﻿using Loja.Domain.Core.Entities;
 using Loja.Domain.Interfaces;
-using Loja.Infra.Data.Contexts;
+using Loja.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -30,12 +30,12 @@ namespace Loja.Infra.Data.Repositories
             return _db;
         }
 
-        public async Task<IEnumerable<TEntity>> GetAsync()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _db.AsNoTracking().ToListAsync();
         }
 
-        public async Task<TEntity> GetAsync(Guid id)
+        public async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await _db.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }

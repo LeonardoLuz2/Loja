@@ -1,4 +1,4 @@
-﻿using Loja.Domain.Entities;
+﻿using Loja.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,8 +12,7 @@ namespace Loja.Domain.Interfaces
         void Add(TEntity obj);
         void Remove(Guid id);
         void Update(TEntity obj);
-
-        Task<IEnumerable<TEntity>> GetAsync();
-        Task<TEntity> GetAsync(Guid id);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<TEntity> GetByIdAsync(Guid id);
     }
 }

@@ -1,6 +1,6 @@
-﻿using AutoMapper;
-using Loja.Infra.Data.Contexts;
+﻿using Loja.Infra.Data.Context;
 using Loja.WebAPI.Extensions;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -21,19 +21,20 @@ namespace Loja.WebAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<LojaContext>(options =>
+            {
+                options.UseInMemoryDatabase("InMemoryDatabase");
+            });
 
             services.Configure<ApiBehaviorOptions>(opt =>
             {
                 opt.SuppressModelStateInvalidFilter = true;
             });
 
-            services.AddAutoMapper();
+            services.AddAutoMapperSetup();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<LojaContext>(options =>
-            {
-                options.UseInMemoryDatabase("InMemoryDatabase");
-            });
+            services.AddMediatR(typeof(Startup));
 
             services.AddCors();
 

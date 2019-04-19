@@ -1,5 +1,5 @@
 ﻿using Loja.Domain.Interfaces;
-using Loja.Infra.Data.Contexts;
+using Loja.Infra.Data.Context;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +11,10 @@ namespace Loja.Infra.Data.UoW
     {
         private readonly LojaContext _context;
 
-        public UnitOfWork(LojaContext context) => _context = context;
+        public UnitOfWork(LojaContext context)
+        {
+            _context = context;
+        }
 
         public bool Commit()
         {

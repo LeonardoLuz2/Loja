@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.3" />
+    <ProjectReference Include="..\Loja.Domain.Core\Loja.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
