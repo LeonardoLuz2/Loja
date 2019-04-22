@@ -5,8 +5,6 @@ using Loja.Domain.Interfaces;
 using MediatR;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using Xunit;
 
@@ -40,7 +38,7 @@ namespace Loja.Tests.CommandHandlers
         public void RegisterProduct_ShouldBeSuccess()
         {
             // Arrange
-            var productCommand = new RegisterProductCommand("Pipoca", 10);
+            var productCommand = new RegisterProductCommand("Pipoca", 10, 5);
 
             // Act
             var result = productCommandHandler.Handle(productCommand, new CancellationToken());
@@ -53,7 +51,7 @@ namespace Loja.Tests.CommandHandlers
         public void RegisterProduct_ShouldReturnErrorWhenCommandIsInvalid()
         {
             // Arrange
-            var productCommand = new RegisterProductCommand("", 0);
+            var productCommand = new RegisterProductCommand("", 0, 0);
 
             // Act
             var result = productCommandHandler.Handle(productCommand, new CancellationToken());
@@ -92,7 +90,7 @@ namespace Loja.Tests.CommandHandlers
         public void UpdateProduct_ShouldBeSuccess()
         {
             // Arrange
-            var productCommand = new UpdateProductCommand(Guid.NewGuid(), "Pipoca", 4);
+            var productCommand = new UpdateProductCommand(Guid.NewGuid(), "Pipoca", 4, 5);
 
             // Act
             var result = productCommandHandler.Handle(productCommand, new CancellationToken());
@@ -105,7 +103,7 @@ namespace Loja.Tests.CommandHandlers
         public void UpdateProduct_ShouldReturnErrorWhenCommandIsInvalid()
         {
             // Arrange
-            var productCommand = new UpdateProductCommand(Guid.NewGuid(), "P", 4);
+            var productCommand = new UpdateProductCommand(Guid.NewGuid(), "P", 4, 5);
 
             // Act
             var result = productCommandHandler.Handle(productCommand, new CancellationToken());

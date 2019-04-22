@@ -9,7 +9,7 @@ namespace Loja.Tests.Commands
         [Fact]
         public void RegisterProduct_ShouldReturnErrorWhenNameIsInvalid()
         {
-            var command = new RegisterProductCommand("", 10);
+            var command = new RegisterProductCommand("", 10, 5);
 
             Assert.False(command.IsValid());
         }
@@ -17,7 +17,7 @@ namespace Loja.Tests.Commands
         [Fact]
         public void RegisterProduct_ShouldReturnErrorWhenPriceIsInvalid()
         {
-            var command = new RegisterProductCommand("Pipoca", .01m);
+            var command = new RegisterProductCommand("Pipoca", .01m, 5);
 
             Assert.False(command.IsValid());
         }
@@ -25,7 +25,7 @@ namespace Loja.Tests.Commands
         [Fact]
         public void RegisterProduct_ShouldBeSuccess()
         {
-            var command = new RegisterProductCommand("Pipoca", 10);
+            var command = new RegisterProductCommand("Pipoca", 10, 5);
 
             Assert.True(command.IsValid());
         }
@@ -50,7 +50,7 @@ namespace Loja.Tests.Commands
         [Fact]
         public void UpdateProduct_ShouldReturnErrorWhenCommandIsInvalid()
         {
-            var command = new UpdateProductCommand(Guid.NewGuid(), "P", 2);
+            var command = new UpdateProductCommand(Guid.NewGuid(), "P", 2, 5);
 
             Assert.False(command.IsValid());
         }
@@ -58,7 +58,7 @@ namespace Loja.Tests.Commands
         [Fact]
         public void UpdateProduct_ShouldBeSuccess()
         {
-            var command = new UpdateProductCommand(Guid.NewGuid(), "Pipoca", 4);
+            var command = new UpdateProductCommand(Guid.NewGuid(), "Pipoca", 4, 5);
 
             Assert.True(command.IsValid());
         }

@@ -12,12 +12,12 @@ namespace Loja.Application.AutoMapper
             CreateMap<Product, ProductViewModel>();
 
             CreateMap<ProductViewModel, RegisterProductCommand>()
-                .ConstructUsing(p => new RegisterProductCommand(p.Name, p.Price))
+                .ConstructUsing(p => new RegisterProductCommand(p.Name, p.Price, p.QuantityOnHand))
                 .ForMember(p => p.Id, x => x.Ignore())
                 .AfterMap((viewModel, command) => viewModel.Id = command.Id);
 
             CreateMap<ProductViewModel, UpdateProductCommand>()
-                .ConstructUsing(p => new UpdateProductCommand(p.Id, p.Name, p.Price));
+                .ConstructUsing(p => new UpdateProductCommand(p.Id, p.Name, p.Price, p.QuantityOnHand));
         }
     }
 }

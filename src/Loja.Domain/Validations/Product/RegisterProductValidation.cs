@@ -1,7 +1,4 @@
 ﻿using Loja.Domain.Commands.Product;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Loja.Domain.Validations.Product
 {
@@ -11,6 +8,7 @@ namespace Loja.Domain.Validations.Product
         {
             ValidateName();
             ValidatePrice();
+            ValidateQuantityOnHand();
         }
     }
 }

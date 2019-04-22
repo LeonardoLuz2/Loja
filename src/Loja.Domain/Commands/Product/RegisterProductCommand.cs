@@ -5,11 +5,12 @@ namespace Loja.Domain.Commands.Product
 {
     public class RegisterProductCommand : ProductCommand
     {
-        public RegisterProductCommand(string name, decimal price)
+        public RegisterProductCommand(string name, decimal price, int quantityOnHand)
         {
             Id = Guid.NewGuid();
             Name = name;
             Price = price;
+            QuantityOnHand = quantityOnHand;
         }
 
         public override bool IsValid()

@@ -32,7 +32,7 @@ namespace Loja.Domain.CommandHandlers
                 return Task.FromResult(false);
             }
 
-            var product = new Product(command.Id, command.Name, command.Price);
+            var product = new Product(command.Id, command.Name, command.Price, command.QuantityOnHand);
 
             _productRepository.Add(product);
 
@@ -50,7 +50,7 @@ namespace Loja.Domain.CommandHandlers
                 return Task.FromResult(false);
             }
 
-            var product = new Product(command.Id, command.Name, command.Price);
+            var product = new Product(command.Id, command.Name, command.Price, command.QuantityOnHand);
 
             _productRepository.Update(product);
 

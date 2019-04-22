@@ -9,7 +9,7 @@ namespace Loja.Domain.Validations.Product
         protected void ValidateId()
         {
             RuleFor(p => p.Id)
-                .NotEqual(Guid.Empty);
+                .NotEqual(Guid.Empty).WithMessage("Id inválido.");
         }
 
         protected void ValidateName()
@@ -22,7 +22,13 @@ namespace Loja.Domain.Validations.Product
         protected void ValidatePrice()
         {
             RuleFor(p => p.Price)
-                .GreaterThanOrEqualTo(.1m);
+                .GreaterThanOrEqualTo(.1m).WithMessage("O preço deve ser maior que zero.");
+        }
+
+        protected void ValidateQuantityOnHand()
+        {
+            RuleFor(p => p.QuantityOnHand)
+                .GreaterThan(0).WithMessage("A quantidade deve ser maior que zero.");
         }
     }
 }

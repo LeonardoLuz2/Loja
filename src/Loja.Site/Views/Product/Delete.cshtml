@@ -9,17 +9,23 @@
 <h5>Are you sure you want to delete this?</h5>
 <div>
     <dl class="row">
-        <dt class = "col s1">
+        <dt class="col s3 m2 l1">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col s11">
+        <dd class="col s9 m10 l11">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col s1">
+        <dt class="col s3 m2 l1">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-        <dd class = "col s11">
+        <dd class="col s9 m10 l11">
             @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col s3 m2 l1">
+            @Html.DisplayNameFor(model => model.QuantityOnHand)
+        </dt>
+        <dd class="col s9 m10 l11">
+            @Html.DisplayFor(model => model.QuantityOnHand)
         </dd>
     </dl>
     

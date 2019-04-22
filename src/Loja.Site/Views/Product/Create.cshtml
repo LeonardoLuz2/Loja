@@ -20,6 +20,11 @@
                 <input data-val-number="O Valor deve estar em um formato válido." asp-for="Price" />
                 <span asp-validation-for="Price" class="red-text"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="QuantityOnHand"></label>
+                <input asp-for="QuantityOnHand" />
+                <span asp-validation-for="QuantityOnHand" class="red-text"></span>
+            </div>
             <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn" />

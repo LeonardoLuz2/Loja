@@ -15,25 +15,31 @@
             <th>
                 @Html.DisplayNameFor(model => model.Price)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityOnHand)
+            </th>
             <th class="right-align"><a class="btn waves-effect waves-light blue darken-4" asp-action="Create">Create New</a></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td class="right-align">
-                    <a class="btn-small waves-effect waves-light teal darken-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn-small waves-effect waves-light green darken-4" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a class="btn-small waves-effect waves-light red accent-4" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityOnHand)
+            </td>
+            <td class="right-align">
+                <a class="btn-small waves-effect waves-light teal darken-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn-small waves-effect waves-light green darken-4" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="btn-small waves-effect waves-light red accent-4" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
