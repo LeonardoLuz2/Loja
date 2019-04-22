@@ -1,30 +1,29 @@
 ﻿@model Loja.Application.ViewModels.ProductViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create product";
 }
 
-<h1>Create</h1>
+<h4>@ViewData["Title"]</h4>
 
-<h4>Product</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="red-text"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name" class="red-text"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input data-val-number="O Valor deve estar em um formato válido." asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="Price"></label>
+                <input data-val-number="O Valor deve estar em um formato válido." asp-for="Price" />
+                <span asp-validation-for="Price" class="red-text"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a class="btn btn-dark" asp-action="Index">Back to List</a>
+                <input type="submit" value="Create" class="btn" />
+                <a class="btn waves-effect waves-light brown darken-4" asp-action="Index">Back to List</a>
             </div>
         </form>
     </div>

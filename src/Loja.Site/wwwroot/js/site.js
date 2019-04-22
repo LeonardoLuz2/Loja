@@ -8,3 +8,7 @@
         return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
     }
 }
+
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
